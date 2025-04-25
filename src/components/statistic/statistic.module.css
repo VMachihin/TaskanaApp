@@ -1,0 +1,19 @@
+.statistic {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  row-gap: 25px;
+  align-self: center;
+  height: 100%;
+}
+
+.info {
+  width: 352px;
+}

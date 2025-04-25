@@ -1,0 +1,31 @@
+.footer {
+  width: 100%;
+  text-align: center;
+  max-height: 56px;
+  padding: 16px 24px;
+  color: var(--color-neutral-600);
+  background-color: var(--color-neutral-0);
+  transition: background-color var(--transition-duration) ease,
+    color var(--transition-duration) ease;
+}
+
+.link {
+  text-decoration: underline;
+  position: relative;
+}
+
+.link:hover {
+  color: var(--color-neutral-800);
+}
+
+.link:focus {
+  outline: none;
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--color-neutral-900);
+  outline-offset: 2px;
+  border-radius: 4px;
+  box-shadow: var(--shadow-base);
+  color: var(--color-neutral-800);
+}

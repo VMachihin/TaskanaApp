@@ -1,0 +1,54 @@
+.header {
+  width: 100%;
+  min-width: 1280px;
+  min-height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 18px;
+  background-color: var(--color-base-black);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-base);
+}
+
+.actions {
+  display: flex;
+  column-gap: 24px;
+}
+
+.create {
+  background-color: var(--color-primary-400);
+}
+
+.create:hover {
+  background-color: var(--color-primary-500);
+}
+
+.create:active {
+  background-color: var(--color-primary-300);
+}
+
+.create:disabled:hover {
+  background-color: var(--color-primary-400);
+  color: var(--color-base-white);
+}
+
+.create:focus {
+  outline: none;
+  color: var(--color-base-white);
+}
+
+.create:focus-visible {
+  outline: 2px solid var(--color-base-white);
+  outline-offset: 2px;
+}
+
+.create:disabled {
+  filter: brightness(50%);
+}
+
+.create:disabled:hover {
+  cursor: not-allowed;
+}

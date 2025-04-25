@@ -1,0 +1,7 @@
+.content {
+  display: grid;
+  grid-template-columns: 211px 1fr 395px;
+  width: 100%;
+  min-width: 1280px;
+  min-height: calc(100dvh - var(--header-height));
+}

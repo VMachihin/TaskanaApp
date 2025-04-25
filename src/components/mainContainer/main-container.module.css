@@ -1,0 +1,17 @@
+.main {
+  width: 100%;
+  max-width: 948px;
+  height: calc(100vh - var(--header-height) - 56px);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.title {
+  padding-block: 24px;
+  color: var(--color-neutral-800);
+  background-color: var(--color-neutral-0);
+  position: sticky;
+  top: 0;
+  transition: background-color var(--transition-duration) ease;
+}

@@ -1,0 +1,33 @@
+.button {
+  padding: 6px 16px 6px 14px;
+  color: var(--color-base-white);
+  font-weight: 600;
+  border: 2px solid transparent;
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 8px;
+  transition: all var(--transition-duration) ease;
+  position: relative;
+}
+
+.button__loader {
+  animation: spinner 0.7s linear infinite;
+}
+
+.loading {
+  pointer-events: none;
+  cursor: not-allowed;
+  /* background-color: var(--color-primary-300); */
+  cursor: not-allowed;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

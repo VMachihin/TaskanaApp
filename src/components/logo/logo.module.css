@@ -1,0 +1,52 @@
+.logo {
+  width: 134px;
+  height: 48px;
+  padding: 5px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.logo:focus {
+  outline: none;
+}
+
+.logo:focus-visible {
+  outline: 2px solid var(--color-base-white);
+  outline-offset: -2px;
+  border-radius: var(--border-radius);
+}
+
+.logo:hover .logoSquare {
+  width: 124px;
+}
+
+.logo:hover .logoText {
+  left: 12px;
+}
+
+.logo:focus-visible .logoSquare {
+  width: 124px;
+}
+
+.logo:focus-visible .logoText {
+  left: 12px;
+}
+
+.logoSquare {
+  width: 40px;
+  height: 40px;
+  background: var(--color-primary-400-500);
+  border-radius: var(--border-radius);
+  transition: var(--transition-duration);
+}
+
+.logoText {
+  color: var(--color-base-white);
+  font-weight: 700;
+  font-size: 32px;
+  position: absolute;
+  top: 0;
+  left: 17px;
+  transition: var(--transition-duration);
+}
