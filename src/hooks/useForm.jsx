@@ -1,5 +1,5 @@
+import { useCallback, useState } from 'react';
 import { generateId } from '@/utils/generateId';
-import { useState, useCallback } from 'react';
 
 const initialState = {
   id: '',
@@ -19,12 +19,9 @@ export const useFormAndValidation = () => {
     setValues({ ...values, id: generateId(), [name]: currentValue });
   };
 
-  const resetForm = useCallback(
-    (newValues = initialState) => {
-      setValues(newValues);
-    },
-    [setValues]
-  );
+  const resetForm = useCallback(() => {
+    setValues(initialState);
+  }, [setValues]);
 
   return {
     values,
