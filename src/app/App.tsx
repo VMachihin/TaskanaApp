@@ -5,9 +5,11 @@ import './styles/index.css';
 
 const App = () => {
   return (
-    <ThemeProvider>
-      <AppLayout />
-    </ThemeProvider>
+    <div data-testid='app-container'>
+      <ThemeProvider data-testid='theme-provider'>
+        <AppLayout />
+      </ThemeProvider>
+    </div>
   );
 };
 
