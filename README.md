@@ -1,4 +1,4 @@
-# TaskanaApp
+![image](https://github.com/user-attachments/assets/14119bb6-839b-417d-a0c2-052315712f6d)# TaskanaApp
 
 Веб-приложение для управления задачами с поддержкой тем и интерактивным интерфейсом.
 
@@ -40,7 +40,7 @@ npm start
 
 
 
-### Инструменты
+### U+1F6E0 Инструменты
 
 ```plaintext
 ├── ESLint — линтинг кода
