@@ -28,24 +28,17 @@ npm start
 
 ## ⚙️ Технологии
 
-<div align="center">
-
-[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
-[![Context API](https://img.shields.io/badge/Context_API-FF6B6B?style=for-the-badge&logo=react&logoColor=white)](https://react.dev/learn/scaling-up-with-reducer-and-context)
-
-</div>
-
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=ts,js,react,styledcomponents" alt="Tech icons">
+  <img src="https://skillicons.dev/icons?i=ts,js,react,vite" alt="Tech icons">
 </p>
 
-- <span style="color: #3178C6">**TypeScript**</span> — статическая типизация
-- <span style="color: #F7DF1E">**JavaScript**</span> — основа приложения
-- <span style="color: #61DAFB">**React**</span> — ядро интерфейса
-- <span style="color: #DB7093">**Styled Components**</span> — CSS-in-JS
-- <span style="color: #FF6B6B">**Context API**</span> — глобальное состояние
+- <span style="color: #3178C6">**TypeScript**</span>
+- <span style="color: #F7DF1E">**JavaScript**</span>
+- <span style="color: #61DAFB">**React**</span> 
+- <span style="color: #FF6B6B">**Context API**</span>
+- <span style="color: #FF6B6B">**Vite**</span>
+
+
 
 ### Инструменты
 
@@ -53,10 +46,9 @@ npm start
 ├── ESLint — линтинг кода
 ├── Prettier — форматирование
 └── Vite — сборка проекта
-
-## 📁 Структура проекта
-
 ```
+
+### 📁 Структура проекта
 
 ┣ 📂public
 ┣ 📂src
@@ -65,7 +57,5 @@ npm start
 ┣ 📂pages
 ┣ 📂shared
 ┣ 📂widgets
-
-```
 
 ```
