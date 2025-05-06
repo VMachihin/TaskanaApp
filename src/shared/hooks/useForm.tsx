@@ -19,12 +19,9 @@ export const useFormAndValidation = () => {
     setValues({ ...values, id: generateId(), [name]: currentValue });
   };
 
-  const resetForm = useCallback(
-    (newValues = initialState) => {
-      setValues(newValues);
-    },
-    [setValues]
-  );
+  const resetForm = useCallback(() => {
+    setValues(initialState);
+  }, [setValues]);
 
   return {
     values,

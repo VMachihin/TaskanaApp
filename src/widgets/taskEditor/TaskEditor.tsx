@@ -39,6 +39,7 @@ export const TaskEditor = () => {
             type='text'
             name='title'
             id='title'
+            placeholder='Название задачи'
             className={styles.input}
             onChange={handleChange}
             value={values?.title || ''}
