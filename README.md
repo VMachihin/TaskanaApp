@@ -2,8 +2,8 @@
 
 Веб-приложение для управления задачами с поддержкой тем и интерактивным интерфейсом.
 
-[taskana-light.jpg](https://postimg.cc/zHKJLgMb)
-[taskana-dark.jpg](https://postimg.cc/sQtjDcnC)
+![taskana-light.jpg](https://postimg.cc/zHKJLgMb)
+![taskana-dark.jpg](https://postimg.cc/sQtjDcnC)
 
 ## 🚀 Быстрый старт
 
