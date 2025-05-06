@@ -33,13 +33,12 @@ npm start
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
-[![Styled Components](https://img.shields.io/badge/Styled%20Components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)](https://styled-components.com/)
 [![Context API](https://img.shields.io/badge/Context_API-FF6B6B?style=for-the-badge&logo=react&logoColor=white)](https://react.dev/learn/scaling-up-with-reducer-and-context)
 
 </div>
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=ts,js,react,styledcomponents,redux&theme=light&perline=5" alt="Tech icons">
+  <img src="https://skillicons.dev/icons?i=ts,js,react,styledcomponents" alt="Tech icons">
 </p>
 
 - <span style="color: #3178C6">**TypeScript**</span> — статическая типизация
