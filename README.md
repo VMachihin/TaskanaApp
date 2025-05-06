@@ -29,7 +29,7 @@ npm start
 ## ⚙️ Технологии
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=ts,js,react,vite" alt="Tech icons">
+  <img src="https://skillicons.dev/icons?i=ts,js,react,vite,vitest" alt="Tech icons">
 </p>
 
 - <span style="color: #3178C6">**TypeScript**</span>
@@ -37,6 +37,7 @@ npm start
 - <span style="color: #61DAFB">**React**</span> 
 - <span style="color: #FF6B6B">**Context API**</span>
 - <span style="color: #FF6B6B">**Vite**</span>
+- <span style="color: #FF6B6B">**Vitest**</span>
 
 
 
