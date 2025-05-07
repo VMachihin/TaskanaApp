@@ -23,7 +23,7 @@ npm install
 # 🚀 Запуск
 
 ```bash
-npm start
+npm run dev
 ```
 
 ## ⚙️ Технологии
