@@ -1,5 +1,4 @@
-import { TaskList } from '@/widgets/taskList';
-
+import { TaskList } from '@/widgets';
 import styles from './main-container.module.css';
 
 export const MainContainer = () => {

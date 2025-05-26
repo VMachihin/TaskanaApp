@@ -16,7 +16,13 @@ export const useFormAndValidation = () => {
     const { value, name } = event.target;
     const currentValue = name === 'priority' ? +value : value;
 
-    setValues({ ...values, id: generateId(), [name]: currentValue });
+    setValues({
+      ...values,
+      id: generateId(),
+      [name]: currentValue,
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+    });
   };
 
   const resetForm = useCallback(() => {

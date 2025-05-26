@@ -1,4 +1,4 @@
-import { FC, ReactNode, useEffect, useState } from 'react';
+import { FC, ReactNode, useLayoutEffect, useState } from 'react';
 import { ThemeContext } from './ThemeContext';
 
 type Theme = 'light' | 'dark';
@@ -10,7 +10,7 @@ interface ThemeProviderProps {
 export const ThemeProvider: FC<ThemeProviderProps> = ({ children }) => {
   const [theme, setTheme] = useState<Theme>('light');
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     document.body.setAttribute('data-theme', theme);
   }, [theme]);
 

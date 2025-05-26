@@ -35,15 +35,14 @@ export const Button: FC<IButtonProps> = (props) => {
       {isLoading ? (
         <Icon
           name='loading'
-          className={`${styles.button__loader} ${
+          className={`${styles.buttonLoader} ${
             isLoading ? styles.loading : ''
           }`}
         />
       ) : (
         <>
-          {' '}
           {icon}
-          {label && <span className={styles.button__text}>{label}</span>}
+          {label && <span className={styles.label}>{label}</span>}
         </>
       )}
     </button>

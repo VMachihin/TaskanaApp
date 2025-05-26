@@ -1,0 +1,10 @@
+.item {
+  display: flex;
+  align-items: center;
+  column-gap: 18px;
+}
+
+.title_task {
+  font-size: 18px;
+  line-height: 133%;
+}

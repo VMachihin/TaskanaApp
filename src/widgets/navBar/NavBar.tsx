@@ -1,5 +1,4 @@
-import { Icon } from '@/shared/ui/icon';
-
+import { Icon } from '@/shared/ui';
 import styles from './navbar.module.css';
 
 export const NavBar = () => {

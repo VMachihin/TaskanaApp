@@ -1,5 +1,4 @@
-import { Illustration } from '@/shared/ui/illustration';
-
+import { Illustration } from '@/shared/ui';
 import styles from './statistic.module.css';
 
 export const Statistic = () => {

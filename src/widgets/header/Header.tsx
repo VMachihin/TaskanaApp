@@ -1,8 +1,4 @@
-import { Logo } from '@/shared/ui/logo';
-import { Button } from '@/shared/ui/button';
-import { Icon } from '@/shared/ui/icon';
-import { ThemeSwitcher } from '@/shared/ui/themeSwitcher';
-
+import { Logo, Button, Icon, ThemeSwitcher } from '@/shared/ui';
 import styles from './header.module.css';
 
 export const Header = () => {

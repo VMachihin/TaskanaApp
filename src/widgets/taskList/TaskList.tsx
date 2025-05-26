@@ -1,9 +1,11 @@
-import { Illustration } from '@/shared/ui/illustration';
+import { useTaskStore } from '@/app/store/store';
+import { Illustration } from '@/shared/ui';
+import { TaskItem } from '@/widgets';
 
 import styles from './taskList.module.css';
 
 export const TaskList = () => {
-  const checkboxMode = { 1: 'lowest', 2: 'medium', 3: 'high' };
+  const tasks = useTaskStore((state) => state.tasks);
 
   return (
     <>
@@ -24,20 +26,11 @@ export const TaskList = () => {
           />
         </div>
 
-        {/* <ul className={styles.list}>
-            {tasks.map((task) => (
-              <li className={styles.item} key={task.id}>
-                <input
-                  type='checkbox'
-                  id={task.id}
-                  className={`${styles.checkbox} ${
-                    styles[checkboxMode[task.priority]]
-                  }`}
-                />
-                <span className={styles.title_task}>{task.title}</span>
-              </li>
-            ))}
-          </ul> */}
+        <ul className={styles.list}>
+          {tasks?.map((task) => (
+            <TaskItem task={task} />
+          ))}
+        </ul>
       </section>
     </>
   );

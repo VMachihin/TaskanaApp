@@ -1,9 +1,5 @@
 import { IncomingTasks } from '@/pages/incomingTasks';
-
-import { NavBar } from '@/widgets/navBar';
-import { SideBar } from '@/widgets/sideBar';
-import { TaskEditor } from '@/widgets/taskEditor';
-
+import { NavBar, SideBar, TaskEditor } from '@/widgets';
 import styles from './content.module.css';
 
 export const Content = () => {

@@ -7,18 +7,17 @@
   align-items: center;
   justify-content: center;
   column-gap: 8px;
-  transition: all var(--transition-duration) ease;
+  transition: color var(--transition-duration) ease,
+    background-color var(--transition-duration) ease;
   position: relative;
 }
 
-.button__loader {
+.buttonLoader {
   animation: spinner 0.7s linear infinite;
 }
 
 .loading {
   pointer-events: none;
-  cursor: not-allowed;
-  /* background-color: var(--color-primary-300); */
   cursor: not-allowed;
 }
 

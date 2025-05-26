@@ -1,5 +1,4 @@
-import { Statistic } from '@/widgets/statistic';
-
+import { Statistic } from '@/widgets';
 import styles from './sidebar.module.css';
 
 export const SideBar = () => {

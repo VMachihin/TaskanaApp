@@ -21,8 +21,8 @@
   color: var(--color-neutral-0);
   background-color: var(--color-neutral-800);
   box-shadow: var(--shadow-base);
-  border: 2px solid transparent;
-  outline: none;
+  outline: 2px solid transparent;
+  outline-offset: -4px;
   font-weight: 600;
   text-decoration: none;
   border-radius: var(--border-radius);
@@ -38,8 +38,7 @@
 }
 
 .link:focus-visible {
-  outline: 2px solid var(--color-neutral-900);
-  border: 2px solid var(--color-neutral-0);
+  outline: 2px solid var(--color-neutral-0);
   background-color: var(--color-neutral-700);
   box-shadow: var(--shadow-base-hover);
 }

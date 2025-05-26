@@ -14,5 +14,6 @@
   background-color: var(--color-neutral-0);
   position: sticky;
   top: 0;
-  transition: background-color var(--transition-duration) ease;
+  transition: color var(--transition-duration) ease,
+    background-color var(--transition-duration) ease;
 }

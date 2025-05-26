@@ -12,8 +12,10 @@
   row-gap: 25px;
   align-self: center;
   height: 100%;
+  transition: var(--transition-duration);
 }
 
 .info {
   width: 352px;
+  transition: color var(--transition-duration) ease;
 }

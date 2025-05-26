@@ -24,10 +24,11 @@
   --color-secondary-400: #9d6aff;
   --color-secondary-500: #b792ff;
 
-  --shadow-base: 2px 2px 4px 0 rgba(0, 0, 0, 0.5);
-  --shadow-base-hover: 2px 8px 12px 0 rgba(0, 0, 0, 0.8);
-  --shadow-sm: 2px 2px 4px 0 rgba(0, 0, 0, 0.3);
-  --shadow-sm-hover: 2px 8px 12px 0 rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 0 16px 8px rgb(0 0 0 / 0.4);
+  --shadow-base: 2px 2px 4px 0 rgb(0 0 0 / 0.5);
+  --shadow-base-hover: 2px 8px 12px 0 rgb(0 0 0 / 0.8);
+  --shadow-sm: 2px 2px 4px 0 rgb(0 0 0 / 0.3);
+  --shadow-sm-hover: 2px 8px 12px 0 rgb(0 0 0 / 0.6);
 }
 
 [data-theme='light'] {
@@ -57,10 +58,11 @@
   --color-secondary-400: #742cff;
   --color-secondary-500: #581bcc;
 
-  --shadow-base: 2px 2px 4px 0 rgba(0, 0, 0, 0.2);
-  --shadow-base-hover: 2px 8px 12px 0 rgba(0, 0, 0, 0.25);
-  --shadow-sm: 2px 2px 4px 0 rgba(0, 0, 0, 0.1);
-  --shadow-sm-hover: 2px 8px 12px 0 rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 0 12px 4px rgb(0 0 0 / 0.1);
+  --shadow-base: 2px 2px 4px 0 rgb(0 0 0 / 0.2);
+  --shadow-base-hover: 2px 8px 12px 0 rgb(0 0 0 / 0.25);
+  --shadow-sm: 2px 2px 4px 0 rgb(0 0 0 / 0.1);
+  --shadow-sm-hover: 2px 8px 12px 0 rgb(0 0 0 / 0.2);
 }
 
 :root {
@@ -68,6 +70,7 @@
 
   --color-base-black: #000000;
   --color-base-white: #fff;
+  --color-base-900: #141414;
   --color-base-800: #1c1c1c;
   --color-base-600: #6c6c6c;
 

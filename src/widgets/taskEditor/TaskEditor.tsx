@@ -25,9 +25,7 @@ export const TaskEditor = () => {
   });
 
   return (
-    <div
-    /*  className={`${styles.taskEditor} ${isOpenTaskEditor && styles.isOpen}`} */
-    >
+    <div className={`${styles.taskEditor} ${true && styles.isOpen}`}>
       <form className={styles.formTask} /* onSubmit={handleSubmit} */>
         <div className={styles.input_wrapper}>
           <h2 className={styles.title}>Создание задачи</h2>
