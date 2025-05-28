@@ -3,7 +3,7 @@ body {
   font-family: var(--font-family-base);
   color: var(--color-neutral-800);
   background-color: var(--color-neutral-0);
-  transition: background-color var(--transition-duration) ease;
+  transition: var(--transition-duration);
 }
 
 a,

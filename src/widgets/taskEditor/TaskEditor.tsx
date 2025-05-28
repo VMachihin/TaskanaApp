@@ -1,32 +1,45 @@
-import { useEffect, useRef } from 'react';
+import { FormEvent, useEffect, useRef } from 'react';
+import clsx from 'clsx';
+import { useTaskEditorStore, useTaskStore } from '@/app/store/store';
 import { useFormAndValidation } from '@/shared/hooks/useForm';
-
 import { Button } from '@/shared/ui/button';
 import { Icon } from '@/shared/ui/icon';
 
-import styles from './task-editor.module.css';
+import styles from './taskEditor.module.css';
 
 export const TaskEditor = () => {
-  const inputRef = useRef(null);
+  const inputRef = useRef<HTMLInputElement>(null);
   const { values, resetForm, handleChange } = useFormAndValidation();
+  const { isOpenTaskEditor, toggleTaskEditor } = useTaskEditorStore(
+    (state) => state
+  );
+  const { addTask } = useTaskStore((state) => state);
 
   useEffect(() => {
-    //   if (isOpenTaskEditor && inputRef.current) {
-    //     setTimeout(() => {
-    //       inputRef.current.focus();
-    //     }, 200);
-    //   }
-    // }, [isOpenTaskEditor]);
-    // const handleSubmit = (e) => {
-    //   e.preventDefault();
-    //   addTask(values);
-    //   handleCloseTaskEditor();
-    //   resetForm();
-  });
+    if (isOpenTaskEditor && inputRef.current) {
+      const inputElement = inputRef.current;
+
+      setTimeout(() => {
+        inputElement.focus();
+      }, 200);
+    }
+  }, [isOpenTaskEditor]);
+
+  const handleCancel = () => {
+    toggleTaskEditor();
+    resetForm();
+  };
+
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
+
+    addTask(values);
+    handleCancel();
+  };
 
   return (
-    <div className={`${styles.taskEditor} ${true && styles.isOpen}`}>
-      <form className={styles.formTask} /* onSubmit={handleSubmit} */>
+    <div className={clsx(styles.taskEditor, isOpenTaskEditor && styles.isOpen)}>
+      <form className={styles.formTask} onSubmit={handleSubmit}>
         <div className={styles.input_wrapper}>
           <h2 className={styles.title}>Создание задачи</h2>
 
@@ -47,7 +60,7 @@ export const TaskEditor = () => {
             <button
               type='reset'
               className={styles.resetBtn}
-              /* onClick={resetForm} */
+              onClick={resetForm}
             >
               <Icon name='reset' />
             </button>
@@ -59,7 +72,7 @@ export const TaskEditor = () => {
             <span className={styles.priority_title}>Приоритет</span>
             <fieldset className={styles.actions}>
               <label
-                className={`${styles.actions_button} ${styles.minus}`}
+                className={clsx(styles.actions_button, styles.minus)}
                 htmlFor='lowest_priority'
               >
                 <input
@@ -73,7 +86,7 @@ export const TaskEditor = () => {
                 <Icon name='minus' />
               </label>
               <label
-                className={`${styles.actions_button} ${styles.chevronTop}`}
+                className={clsx(styles.actions_button, styles.chevronTop)}
                 htmlFor='medium_priority'
               >
                 <input
@@ -88,7 +101,7 @@ export const TaskEditor = () => {
               </label>
 
               <label
-                className={`${styles.actions_button} ${styles.arrowTwo}`}
+                className={clsx(styles.actions_button, styles.arrowTwo)}
                 htmlFor='high_priority'
               >
                 <input
@@ -115,9 +128,7 @@ export const TaskEditor = () => {
           <Button
             label='Отмена'
             className={styles.button_cancel}
-            /*  onClick={() => {
-              handleCloseTaskEditor(), resetForm();
-            }} */
+            onClick={handleCancel}
           />
         </div>
       </form>

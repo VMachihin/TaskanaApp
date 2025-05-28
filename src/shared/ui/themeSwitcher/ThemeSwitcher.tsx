@@ -1,4 +1,5 @@
-import { ChangeEvent, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
+import clsx from 'clsx';
 import { useTheme } from '@/shared/hooks/useTheme';
 import { Icon } from '@/shared/ui/icon';
 
@@ -12,10 +13,7 @@ export const ThemeSwitcher = () => {
     const handleKeyDown = (event: KeyboardEvent) => {
       const target = event.target as HTMLElement;
 
-      if (
-        target.tagName === 'INPUT' &&
-        (event.key === ' ' || event.key === 'Enter')
-      ) {
+      if (target.tagName === 'INPUT' && event.key === 'Enter') {
         event.preventDefault();
         toggleTheme();
       }
@@ -34,9 +32,11 @@ export const ThemeSwitcher = () => {
       <label className={styles.switch_label}>
         <Icon
           name='sun'
-          className={`${styles.icon} ${styles.sun} ${
-            theme === 'light' ? styles.isActive : null
-          }`}
+          className={clsx(
+            styles.icon,
+            styles.sun,
+            theme === 'light' && styles.isActive
+          )}
         />
         <input
           type='checkbox'
@@ -50,12 +50,16 @@ export const ThemeSwitcher = () => {
             theme === 'light' ? 'light' : 'dark'
           } тему`}
         />
+
         <span className={styles.slider}></span>
+
         <Icon
           name='moon'
-          className={`${styles.icon} ${styles.moon} ${
-            theme === 'dark' ? styles.isActive : null
-          }`}
+          className={clsx(
+            styles.icon,
+            styles.moon,
+            theme === 'dark' && styles.isActive
+          )}
         />
       </label>
     </div>

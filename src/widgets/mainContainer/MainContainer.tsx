@@ -1,10 +1,10 @@
 import { TaskList } from '@/widgets';
-import styles from './main-container.module.css';
+import styles from './mainContainer.module.css';
 
 export const MainContainer = () => {
   return (
     <main className={styles.main}>
-      <h1 className={styles.title}>Входящие</h1>
+      <h1>Входящие</h1>
 
       <TaskList />
     </main>

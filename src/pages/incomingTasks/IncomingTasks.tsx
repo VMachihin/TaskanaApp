@@ -1,7 +1,7 @@
 import { MainContainer } from '@/widgets/mainContainer';
 import { Footer } from '@/widgets/footer';
 
-import styles from './incoming-tasks.module.css';
+import styles from './incomingTasks.module.css';
 
 export const IncomingTasks = () => {
   return (

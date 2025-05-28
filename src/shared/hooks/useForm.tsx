@@ -1,5 +1,5 @@
 import { useState, useCallback, ChangeEvent } from 'react';
-import { generateId } from '../utils/generateId';
+import { nanoid } from 'nanoid';
 
 const initialState = {
   id: '',
@@ -18,7 +18,7 @@ export const useFormAndValidation = () => {
 
     setValues({
       ...values,
-      id: generateId(),
+      id: nanoid(),
       [name]: currentValue,
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
