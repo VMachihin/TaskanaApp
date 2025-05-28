@@ -1,4 +1,4 @@
-import { FormEvent, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import clsx from 'clsx';
 import { useTaskEditorStore, useTaskStore } from '@/app/store/store';
 import { useFormAndValidation } from '@/shared/hooks/useForm';
