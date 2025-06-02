@@ -1,0 +1,82 @@
+.actionsButton {
+  padding: 8px;
+  background-color: transparent;
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actionsButton input {
+  opacity: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.minus,
+.chevronTop,
+.arrowTwo {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.minus {
+  color: var(--color-neutral-600);
+}
+
+.minus:hover {
+  background-color: var(--color-neutral-300);
+  box-shadow: var(--shadow-sm-hover);
+}
+
+.minus:has(input:checked) {
+  background-color: var(--color-neutral-200);
+  box-shadow: var(--shadow-sm);
+}
+
+.minus:has(input:focus-visible) {
+  background-color: var(--color-neutral-300);
+  outline: 2px solid var(--color-neutral-900);
+  box-shadow: var(--shadow-sm-hover);
+}
+
+.chevronTop {
+  color: var(--color-secondary-400);
+}
+
+.chevronTop:hover {
+  background-color: var(--color-secondary-100);
+  box-shadow: var(--shadow-sm-hover);
+}
+
+.chevronTop:has(input:checked) {
+  background-color: var(--color-secondary-0);
+  box-shadow: var(--shadow-sm);
+}
+
+.chevronTop:has(input:focus-visible) {
+  background-color: var(--color-secondary-100);
+  outline: 2px solid var(--color-neutral-900);
+  box-shadow: var(--shadow-sm-hover);
+}
+
+.arrowTwo {
+  color: var(--color-primary-400);
+}
+
+.arrowTwo:hover {
+  background-color: var(--color-primary-100);
+  box-shadow: var(--shadow-sm-hover);
+}
+
+.arrowTwo:has(input:checked) {
+  background-color: var(--color-primary-0);
+  box-shadow: var(--shadow-sm);
+}
+
+.arrowTwo:has(input:focus-visible) {
+  background-color: var(--color-primary-100);
+  outline: 2px solid var(--color-neutral-900);
+  box-shadow: var(--shadow-sm-hover);
+}

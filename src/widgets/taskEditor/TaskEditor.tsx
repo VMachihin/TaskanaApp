@@ -1,29 +1,18 @@
-import { useEffect, useRef } from 'react';
 import clsx from 'clsx';
 import { useTaskEditorStore, useTaskStore } from '@/app/store/store';
 import { useFormAndValidation } from '@/shared/hooks/useForm';
-import { Button } from '@/shared/ui/button';
-import { Icon } from '@/shared/ui/icon';
+import { Button, Input } from '@/shared/ui';
 
 import styles from './taskEditor.module.css';
+import { RadioButton } from '@/shared/ui/radioButton/RadioButton';
+import { priorityItems } from '@/shared/constants/priorityItems';
 
 export const TaskEditor = () => {
-  const inputRef = useRef<HTMLInputElement>(null);
   const { values, resetForm, handleChange } = useFormAndValidation();
   const { isOpenTaskEditor, toggleTaskEditor } = useTaskEditorStore(
     (state) => state
   );
   const { addTask } = useTaskStore((state) => state);
-
-  useEffect(() => {
-    if (isOpenTaskEditor && inputRef.current) {
-      const inputElement = inputRef.current;
-
-      setTimeout(() => {
-        inputElement.focus();
-      }, 200);
-    }
-  }, [isOpenTaskEditor]);
 
   const handleCancel = () => {
     toggleTaskEditor();
@@ -40,94 +29,34 @@ export const TaskEditor = () => {
   return (
     <div className={clsx(styles.taskEditor, isOpenTaskEditor && styles.isOpen)}>
       <form className={styles.formTask} onSubmit={handleSubmit}>
-        <div className={styles.input_wrapper}>
-          <h2 className={styles.title}>Создание задачи</h2>
-
-          <label htmlFor='' className={styles.label}>
-            Название <span>*</span>
-          </label>
-          <input
-            type='text'
-            name='title'
-            id='title'
-            placeholder='Название задачи'
-            className={styles.input}
-            onChange={handleChange}
-            value={values?.title || ''}
-            ref={inputRef}
-          />
-          {values?.title && (
-            <button
-              type='reset'
-              className={styles.resetBtn}
-              onClick={resetForm}
-            >
-              <Icon name='reset' />
-            </button>
-          )}
-        </div>
+        <Input values={values} handleChange={handleChange} />
 
         <div className={styles.priority}>
           <div className={styles.inner}>
-            <span className={styles.priority_title}>Приоритет</span>
+            <span className={styles.priorityTitle}>Приоритет</span>
             <fieldset className={styles.actions}>
-              <label
-                className={clsx(styles.actions_button, styles.minus)}
-                htmlFor='lowest_priority'
-              >
-                <input
-                  type='radio'
-                  id='lowest_priority'
-                  name='priority'
-                  value={1}
-                  onChange={handleChange}
-                  checked={values?.priority === 1}
+              {priorityItems.map((item) => (
+                <RadioButton
+                  {...item}
+                  key={item.id}
+                  checked={Number(values?.priority) === item.value}
+                  handleChange={handleChange}
                 />
-                <Icon name='minus' />
-              </label>
-              <label
-                className={clsx(styles.actions_button, styles.chevronTop)}
-                htmlFor='medium_priority'
-              >
-                <input
-                  type='radio'
-                  id='medium_priority'
-                  name='priority'
-                  value={2}
-                  onChange={handleChange}
-                  checked={values?.priority === 2}
-                />
-                <Icon name='chevronTop' />
-              </label>
-
-              <label
-                className={clsx(styles.actions_button, styles.arrowTwo)}
-                htmlFor='high_priority'
-              >
-                <input
-                  type='radio'
-                  id='high_priority'
-                  name='priority'
-                  value={3}
-                  onChange={handleChange}
-                  checked={values?.priority === 3}
-                />
-                <Icon name='arrowTwo' />
-              </label>
+              ))}
             </fieldset>
           </div>
         </div>
 
-        <div className={styles.button_wrapper}>
+        <div className={styles.buttonWrapper}>
           <Button
             label='Создать'
-            className={styles.button_create}
+            className={styles.buttonCreate}
             type='submit'
             disabled={!values?.title}
           />
           <Button
             label='Отмена'
-            className={styles.button_cancel}
+            className={styles.buttonCancel}
             onClick={handleCancel}
           />
         </div>

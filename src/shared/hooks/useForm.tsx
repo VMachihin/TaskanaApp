@@ -14,7 +14,7 @@ export const useFormAndValidation = () => {
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { value, name } = event.target;
-    const currentValue = name === 'priority' ? +value : value;
+    const currentValue = name === 'priority' ? Number(value) : value;
 
     setValues({
       ...values,

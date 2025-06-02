@@ -1,6 +1,7 @@
 import { FC } from 'react';
-import styles from './icon.module.css';
 import clsx from 'clsx';
+
+import styles from './icon.module.css';
 
 interface IconProps {
   name: string;

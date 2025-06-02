@@ -10,13 +10,19 @@
   cursor: pointer;
 }
 
+.lowest,
+.medium,
+.high {
+  outline: 2px solid transparent;
+}
+
 .lowest {
-  border: 1.5px solid var(--color-neutral-400);
+  border: 2px solid var(--color-neutral-400);
 }
 
 .lowest:hover,
 .lowest:focus-visible {
-  border: 1.5px solid var(--color-neutral-800);
+  border: 2px solid var(--color-neutral-800);
 }
 
 .lowest:focus-visible {
@@ -24,13 +30,17 @@
   outline-offset: 0;
 }
 
+.checkbox:checked.lowest {
+  background-color: var(--color-neutral-800);
+}
+
 .medium {
-  border: 1.5px solid var(--color-secondary-300);
+  border: 2px solid var(--color-secondary-300);
 }
 
 .medium:hover,
 .medium:focus-visible {
-  border: 1.5px solid var(--color-secondary-500);
+  border: 2px solid var(--color-secondary-500);
 }
 
 .medium:focus-visible {
@@ -43,15 +53,19 @@
 }
 
 .high {
-  border: 1.5px solid var(--color-primary-300);
+  border: 2px solid var(--color-primary-300);
 }
 
 .high:hover,
 .high:focus-visible {
-  border: 1.5px solid var(--color-primary-500);
+  border: 2px solid var(--color-primary-500);
 }
 
 .high:focus-visible {
   outline: 4px solid var(--color-primary-100);
   outline-offset: 0;
+}
+
+.checkbox:checked.high {
+  background-color: var(--color-primary-500);
 }

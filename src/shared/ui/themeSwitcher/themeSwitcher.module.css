@@ -6,11 +6,11 @@
   border-radius: 8px;
   background-color: var(--color-base-800);
   outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 
 .toggle_switch:has(.checkbox:focus-visible) {
   outline: 2px solid var(--color-base-white);
-  outline-offset: 2px;
   transition: outline var(--transition-duration) ease;
 }
 

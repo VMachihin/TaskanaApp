@@ -1,8 +1,8 @@
 import { FC } from 'react';
+import clsx from 'clsx';
 import { checkboxMode } from '@/shared/lib/constants';
 
 import styles from './checkbox.module.css';
-import clsx from 'clsx';
 
 interface ICheckbox {
   id: string;

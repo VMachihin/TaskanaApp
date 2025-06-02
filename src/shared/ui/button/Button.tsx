@@ -10,6 +10,7 @@ interface IButtonProps {
   className?: string;
   onClick?: () => void;
   disabled?: boolean;
+  hasChevron?: boolean;
 }
 
 export const Button: FC<IButtonProps> = (props) => {
@@ -20,6 +21,7 @@ export const Button: FC<IButtonProps> = (props) => {
     className,
     onClick,
     disabled = false,
+    hasChevron = false,
   } = props;
   const [isLoading] = useState(false);
 
@@ -43,6 +45,7 @@ export const Button: FC<IButtonProps> = (props) => {
         <>
           {icon}
           {label && <span className={styles.label}>{label}</span>}
+          {hasChevron && <Icon name='chevronBottom' />}
         </>
       )}
     </button>

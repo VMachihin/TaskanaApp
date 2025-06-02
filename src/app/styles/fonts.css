@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'SourceSans3';
+  font-family: 'Source Sans 3';
   src: url('../../shared/assets/fonts/sourceSans3-regular.woff2')
     format('woff2');
   font-weight: 400;
@@ -8,7 +8,7 @@
 }
 
 @font-face {
-  font-family: 'SourceSans3';
+  font-family: 'Source Sans 3';
   src: url('../../shared/assets/fonts/sourceSans3-semiBold.woff2')
     format('woff2');
   font-weight: 600;
@@ -17,7 +17,7 @@
 }
 
 @font-face {
-  font-family: 'SourceSans3';
+  font-family: 'Source Sans 3';
   src: url('../../shared/assets/fonts/sourceSans3-bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;

@@ -1,0 +1,103 @@
+.dropdownWrapper {
+  position: relative;
+}
+
+.dropdownButton {
+  padding: 8px 8px 8px 12px;
+  background-color: var(--color-neutral-200);
+  color: var(--color-neutral-600);
+}
+
+.dropdownButton:is(:hover, :focus-visible) {
+  box-shadow: var(--shadow-sm-hover);
+}
+
+.dropdownButton:hover {
+  background-color: var(--color-neutral-300);
+}
+
+.dropdownButton:focus-visible {
+  outline: 2px solid var(--color-neutral-900);
+}
+
+.activeDropdown {
+  color: var(--color-neutral-800);
+}
+
+.dropdownMenu {
+  padding: 4px;
+  background-color: var(--color-neutral-0);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-lg);
+  position: absolute;
+  top: 48px;
+  right: 0;
+  min-width: 210px;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-duration);
+}
+
+.dropdownHeader {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  min-height: 40px;
+  padding-inline: 8px;
+  font-weight: 700;
+  color: var(--color-neutral-900);
+  transition: var(--transition-duration);
+}
+
+.isOpen {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdownList {
+  color: var(--color-neutral-800);
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+  transition: color var(--transition-duration) ease;
+}
+
+.menuItem {
+  position: relative;
+}
+
+.menuButton {
+  width: 100%;
+  padding: 8px;
+  font-weight: 400;
+  border-radius: 4px;
+  color: var(--color-neutral-800);
+  background-color: var(--color-neutral-0);
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.menuButton:hover {
+  background-color: var(--color-neutral-200);
+}
+
+.menuButton:focus-visible {
+  background-color: var(--color-neutral-200);
+  outline: 2px solid var(--color-neutral-900);
+}
+
+.checked {
+  background-color: var(--color-neutral-200);
+}
+
+.default {
+  font-weight: 700;
+}
+
+.iconWrapper {
+  position: absolute;
+  top: 11px;
+  right: 12px;
+  transition: opacity var(--transition-duration) ease;
+}
