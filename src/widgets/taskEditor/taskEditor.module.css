@@ -10,7 +10,6 @@
   position: fixed;
   top: var(--header-height);
   right: 0;
-  opacity: 0;
   visibility: hidden;
   transform: translateX(100%);
   transition: transform var(--transition-duration-longer) ease-out,
@@ -21,7 +20,6 @@
 }
 
 .isOpen {
-  opacity: 1;
   visibility: visible;
   transform: translate(0);
 }
