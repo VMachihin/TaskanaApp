@@ -1,7 +1,11 @@
 .tasks {
+  width: 100%;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  padding: 24px 24px 0;
+  background-color: var(--color-neutral-0);
+  transition: background-color var(--transition-duration) ease;
 }
 
 .empty_task_content {
@@ -11,6 +15,10 @@
   flex-direction: column;
   margin: auto;
   padding-bottom: 22px;
+}
+
+.empty_task_content:has(.title, .description) {
+  transition: color var(--transition-duration) ease;
 }
 
 .title {
@@ -25,14 +33,11 @@
   margin-bottom: 40px;
 }
 
-.title,
-.description {
-  transition: color var(--transition-duration) ease;
-}
-
 .list {
   display: flex;
   flex-direction: column;
-  row-gap: 16px;
-  padding-top: 16px;
+  row-gap: 8px;
+  align-self: center;
+  width: 100%;
+  max-width: 948px;
 }

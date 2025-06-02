@@ -22,7 +22,7 @@ export const TaskItem: FC<ITaskProps> = ({ task }) => {
   return (
     <li className={styles.item} key={task.id}>
       <div className={styles.inner}>
-        {/* <Checkbox task={task} /> */}
+        <Checkbox id={task.id} priority={task.priority} />
         <span className={styles.titleTask}>{task.title}</span>
       </div>
 
